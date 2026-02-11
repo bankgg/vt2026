@@ -1,0 +1,26 @@
+.main-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+}
+
+.main-bg {
+  position: fixed;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    var(--bg-gradient-1) 0%,
+    var(--bg-gradient-2) 30%,
+    var(--bg-dark) 50%,
+    var(--bg-gradient-3) 70%,
+    var(--bg-gradient-1) 100%
+  );
+  background-size: 100% 200%;
+  animation: gradientShift 15s ease infinite;
+  z-index: -1;
+}
+
+.main-content {
+  position: relative;
+  z-index: 1;
+}
