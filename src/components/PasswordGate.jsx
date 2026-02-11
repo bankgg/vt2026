@@ -17,6 +17,8 @@ export default function PasswordGate({ onSuccess }) {
         if (password === CORRECT_PASSWORD) {
             localStorage.setItem(STORAGE_KEY, 'true');
             setUnlocked(true);
+            // Request fullscreen on user gesture
+            document.documentElement.requestFullscreen?.().catch(() => { });
             setTimeout(() => onSuccess(), 600);
         } else {
             setError(true);
