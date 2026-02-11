@@ -64,7 +64,7 @@ export default function PasswordGate({ onSuccess }) {
                             >
                                 <input
                                     ref={inputRef}
-                                    type="password"
+                                    type="tel"
                                     value={password}
                                     onChange={(e) => {
                                         setPassword(e.target.value);
