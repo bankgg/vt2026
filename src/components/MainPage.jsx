@@ -1,12 +1,16 @@
+import { useState } from 'react';
 import { motion } from 'framer-motion';
 import FloatingHearts from './FloatingHearts';
 import HeroSection from './HeroSection';
 import LoveCounter from './LoveCounter';
 import MemoryTimeline from './MemoryTimeline';
+import GiftBox from './GiftBox';
 import Footer from './Footer';
 import './MainPage.css';
 
 export default function MainPage() {
+    const [showFooter, setShowFooter] = useState(false);
+
     return (
         <motion.div
             className="main-page"
@@ -21,7 +25,8 @@ export default function MainPage() {
                 <HeroSection />
                 <LoveCounter />
                 <MemoryTimeline />
-                <Footer />
+                <GiftBox onReveal={() => setShowFooter(true)} />
+                {showFooter && <Footer />}
             </div>
         </motion.div>
     );

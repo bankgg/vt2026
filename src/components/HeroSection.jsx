@@ -64,7 +64,6 @@ export default function HeroSection() {
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 0.6 }}
             >
-                <span>เลื่อนลงเพื่อย้อนความทรงจำ</span>
                 <span className="hero-scroll-arrow">↓</span>
             </motion.div>
         </section>
